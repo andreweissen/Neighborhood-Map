@@ -1,0 +1,367 @@
+html {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#wrapper {
+  display: none;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+ul {
+  list-style-type: none; 
+  padding-left: 0; 
+  margin-bottom: 0px;
+  padding-bottom: 50px;
+}
+
+li {
+  font-family: Verdana, sans-serif; 
+  padding: 10px 0 10px 15px;}
+
+li:hover {
+  background-color: #7D7D7D; 
+  color: white;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: #7D7D7D;
+}
+
+a:visited {
+  text-decoration: none !important;
+  color: #7D7D7D;
+}
+
+a:active {
+  text-decoration: none !important;
+  color: #7D7D7D;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/*Reset Button*/
+.reset {
+  margin-right: 10px;
+  max-width: 240px;
+  z-index: 100;
+  position: fixed;
+  bottom: 30px;
+  left: 140px;
+}
+
+.reset-icon {
+  background-color: #8c2232;
+  border-radius: 100%;
+  width: 45px;
+  height: 44px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 0px;
+  padding: 0px;
+  outline: 0;
+  margin-right: auto;
+  margin-left: 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.reset-icon:before {
+  background: url("../images/refresh.png");
+  background-size: 30px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  content: "";
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reset-icon:hover {
+  background-color: #b72c3f;
+}
+
+.reset-icon:active {
+  background-color: #ea3851;
+}
+
+/*Weather*/
+.weather {
+  margin-right: 10px;
+  width: 240px;
+  z-index: 100;
+  position: fixed;
+  bottom: 30px;
+  left: 80px;
+}
+
+.weather-icon {
+  background-color: #8c2232;
+  border-radius: 100%;
+  width: 45px;
+  height: 44px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 0px;
+  padding: 0px;
+  outline: 0;
+  margin-right: auto;
+  margin-left: 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.weather-icon:before {
+  background: url("../images/weather.png");
+  background-size: 30px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  content: "";
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather-icon:hover {
+  background-color: #b72c3f;
+}
+
+.weather-icon:active {
+  background-color: #ea3851;
+}
+
+.pointy {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid rgba(256,256,256,.7);
+  margin-right: auto;
+  margin-left: 11px;
+  margin-bottom: 5px;
+}
+
+.weather-box {
+  max-width: 240px;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: rgba(256,256,256,.7);
+  border-radius: 10px;
+}
+
+.forecast {
+  display: inline-block;
+  vertical-align: top;
+  font-family: Verdana, sans-serif;
+}
+
+.forecast h3 {
+  display: block;
+  vertical-align: top;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+}
+
+.forecast ul {
+  padding: 0;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.forecast li {
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+  font-size: 12px;
+}
+
+/*Results*/
+
+#input {
+  margin: 15px 0 5px 20px;
+  width: 83%;
+  height: 35px;
+  font-size: 17px;
+  font-family: helvetica, sans-serif;
+  color: #9D9D9D;
+  border: none;
+  -webkit-box-shadow: 2px 2px 5px #9D9D9D;
+  outline: none;
+}
+
+#input:focus {
+  border: 1px solid #8c2232;
+}
+
+.results {
+  margin-right: 10px;
+  max-width: 240px;
+  z-index: 100;
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+}
+
+.results-icon {
+  background-color: #8c2232;
+  border-radius: 100%;
+  width: 45px;
+  height: 44px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 0px;
+  padding: 0px;
+  outline: 0;
+  margin-right: auto;
+  margin-left: 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.results-icon:before {
+  background: url("../images/search.png");
+  background-size: 30px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  content: "";
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results-icon:hover {
+  background-color: #b72c3f;
+}
+
+.results-icon:active {
+  background-color: #ea3851;
+}
+
+#results-nav {
+  max-height: 480px;
+  max-width: 280px;
+  background-color: rgba(256,256,256,.7);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#results-box {
+  max-height: 480px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 5px;
+}
+
+#results-box::-webkit-scrollbar {
+  width: 10px;
+  overflow: visible;
+}
+
+#results-box::-webkit-scrollbar-thumb {
+  background-color: #8c2232;
+  min-height: 28px;
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+}
+
+#results-box::-webkit-scrollbar-thumb:hover {
+  background-color: #b72c3f;
+}
+
+#photos {
+  max-width: 250px;
+  max-height: 350px;
+}
+
+
+/* Error Button */
+
+.error {
+  margin-right: 10px;
+  max-width: 240px;
+  z-index: 100;
+  position: fixed;
+  bottom: 30px;
+  left: 200px;
+}
+
+.error-icon {
+  background-color: #8c2232;
+  border-radius: 100%;
+  width: 45px;
+  height: 44px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  border: 0px;
+  padding: 0px;
+  outline: 0;
+  margin-right: auto;
+  margin-left: 0px;
+  display: block;
+  cursor: pointer;
+}
+
+.error-icon:before {
+  background: url("../images/error.png");
+  background-size: 30px;
+  display: block;
+  height: 30px;
+  width: 30px;
+  content: "";
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-icon:hover {
+  background-color: #b72c3f;
+}
+
+.error-icon:active {
+  background-color: #ea3851;
+}
+
+.error-box {
+  max-width: 240px;
+  padding: 20px;
+  border-radius: 2px;
+  background-color: rgba(256,256,256,.7);
+  border-radius: 10px;
+}
+
+.error-box h3 {
+  font-family: Verdana, sans-serif;
+  display: block;
+  vertical-align: top;
+  margin: auto;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media screen and (max-height: 600px) {
+  #results-nav {
+    max-height:300px;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  #results-nav {
+    max-height:200px;
+  }
+}

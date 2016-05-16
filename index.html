@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grove City College</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.min.css" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container" id="wrapper">
+      <div class="row" id="map-canvas"></div>
+      <div class="results">
+        <div class="results-container" data-bind="visible: showNav">
+          <div id="results-nav">
+            <input id="input" placeholder="Search…" type="input" data-bind="textInput: query, valueUpdate: 'keydown', event: { keyup: setAll }" autocomplete="off">
+            <div id="results-box">
+              <ul data-bind="template: {name: 'marker', foreach:locations}"></ul>
+              <script type="text/html" id="marker">
+                <div data-bind="visible: visible">
+                  <a href="#" data-bind="attr: {id: id}, click: $root.clickMarker">
+                    <li>
+                      <strong data-bind="text: title"></strong>
+                      <p data-bind="text: des"></p>
+                    </li>
+                  </a>
+                </div>
+              </script>
+            </div>
+          </div>
+          <div class="pointy"></div>
+        </div>
+        <button id="results-button" class="results-icon" data-bind="click: toggleNav"></button>
+      </div>
+      <div class="weather">
+        <div class="weather-container" data-bind="visible: showWeather">
+          <div class="weather-box">
+            <div class="forecast">
+              <!-- ko foreach: conds -->
+              <h3><strong>Grove City, PA Forecast</strong></h3><br>
+                <span>Temperature: </span><span data-bind="text: curTemp, style: { color: tempChanged() ? 'green' : 'black' }"></span>° F<br />
+                <span>Windchill: </span><span data-bind="text: curWind, style: { color: windChanged() ? 'green' : 'black' }"></span>° F<br />
+                <br>
+                <small>Data provided by <span data-bind="text: stationName"></span></small>
+              <!-- /ko -->
+            </div>
+          </div>
+          <div class="pointy"></div>
+        </div>
+        <button id="weather-button" class="weather-icon" data-bind="click: toggleWeather"></button>
+      </div>
+      <div class="reset">
+        <div class="reset-container">
+          <button id="reset" class="reset-icon" data-bind="click: resetMap"></button>
+        </div>
+      </div>
+      <div class="error" data-bind="visible: showError">
+        <div class="error-container">
+          <div class="error-box">
+            <h3><strong>Errors Detected</strong></h3><br>
+            <div data-bind="visible: showFlickrError">Flickr API failed to load<br></div>
+            <div data-bind="visible: showWuError">Wunderground failed to load</div>
+          </div>
+          <div class="pointy"></div>
+        </div>
+        <button id="error" class="error-icon" data-bind="click: toggleError"></button>
+      </div>
+    </div>
+    <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApl3F6LzdHc7kWlAcFRbRUJknAm8imJvM&callback=getImages"
+      onerror="googleError()"></script>
+    <script type="text/javascript" src="js/jQuery.min.js"></script>
+    <script type="text/javascript" src="js/knockout.min.js"></script>
+    <script type="text/javascript" src="js/app.min.js"></script>
+  </body>
+</html>
