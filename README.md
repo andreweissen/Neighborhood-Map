@@ -5,7 +5,7 @@
 ##### About this Project #####
 This project was created to map and list the various structures found on the college campus of the Western Pennsylvania school Grove City College, seeing as a detailed, interactive map does not exist.
 
-A slightly modified functional example may be found at <a href="aeissen-neighborhood-map.appspot.com">aeissen-neighborhood-map.appspot.com</a>.
+A slightly modified functional example may be found at [aeissen-neighborhood-map.appspot.com](https://aeissen-neighborhood-map.appspot.com).
 
 ##### Functionality #####
 This project provides a collapsable search and results popup window, allowing for the instant search and selection of a desired building. Map results are filtered by Knockout JS in real time.
